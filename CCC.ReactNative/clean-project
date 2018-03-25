@@ -1,0 +1,20 @@
+echo ">>>> Removing all node modules in 'node_modules'"
+rm -rf node_modules
+echo ">>>> Done!"
+
+echo ">>>> Clearing temporary react files"
+rm -fr $TMPDIR/react-*
+echo ">>>> Done!"
+
+echo ">>>> Clearing watchman cache"
+watchman watch-del-all
+echo ">>>> Done!"
+
+echo ">>>> Installing all npm modules defined in 'package.json'"
+npm install
+echo ">>>> Done!"
+
+echo ">>>> Linking react native modules to iOS and Android projects"
+react-native link
+echo ">>>> Done!"
+echo ">>>> Project successfully cleaned."

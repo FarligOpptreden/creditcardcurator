@@ -1,0 +1,12 @@
+*.tmp
+*.log
+
+.DS_Store
+node_modules/
+CCC.API/.DS_Store
+CCC.API/node_modules/
+CCC.API/package-lock.json
+CCC.ReactNative/.DS_Store
+CCC.ReactNative/node_modules/
+CCC.ReactNative/package-lock.json
+CCC.ReactNative/android/app/my-release-key.keystore

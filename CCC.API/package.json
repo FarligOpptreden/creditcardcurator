@@ -1,0 +1,35 @@
+{
+  "name": "cccurator.api",
+  "version": "1.0.0",
+  "description": "Service APIs for Creditcard Curator",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/nodemon/bin/nodemon.js -- node_modules/babel-cli/bin/babel-node.js server.js",
+    "build": "mkdir dist_temp; mv dist/.git/ dist_temp/; mv dist/.gitignore dist_temp/; mv dist/.ebextensions dist_temp/; mv dist/.elasticbeanstalk dist_temp/; babel . -d dist_temp/ --ignore node_modules,dist; cp package.json package-lock.json dist_temp; rm -rf dist; mv dist_temp dist;"
+  },
+  "author": "Werner van der Vyver",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "nodemon": "^1.11.0"
+  },
+  "dependencies": {
+    "@types/async": "^2.0.45",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2016": "^6.24.1",
+    "body-parser": "^1.17.2",
+    "cookie-parser": "^1.4.3",
+    "cookie-session": "^2.0.0-beta.2",
+    "express": "^4.15.3",
+    "memcached": "^2.2.2",
+    "moment": "^2.18.1",
+    "mongodb": "^2.0.33",
+    "morgan": "^1.8.2",
+    "node-fetch": "^1.7.3",
+    "pug": "^2.0.0-rc.4",
+    "serve-favicon": "^2.4.3"
+  }
+}
